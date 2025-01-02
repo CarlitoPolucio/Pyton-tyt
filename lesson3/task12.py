@@ -9,4 +9,4 @@ if dublons > semens_sword_price + 5000:
 elif 0 < purchase < 5000:
     print(f"Purchase completed, you got a bonus of 1000 points. Your balance is {discount_purchase} points.")
 else:
-    (print(f"You don't have enough points (55000). You already have {dublons} points."))
+    print(f"You don't have enough points (55000). You already have {dublons} points.")
