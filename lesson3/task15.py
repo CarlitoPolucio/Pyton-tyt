@@ -2,7 +2,7 @@ profit = int(input("Enter the profit: "))
 
 if profit < 0:
     print("dude")
-if 0 < profit < 10000:
+if 0 <= profit <= 10000:
     tax = profit * 0.13
     print(f"Your tax is {tax}$.")
 elif 50000 >= profit > 10000:
