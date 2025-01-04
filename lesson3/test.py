@@ -1,14 +1,10 @@
-profit = int(input("Enter the profit: "))
+time = int(input("Enter the time: "))
 
-if profit < 0:
-    print("dude")
+b = {8,9,12,13,15,16,17,20,21}
+if time in b:
+    print("you can take")
 else:
-    if profit <= 10000:
-        profit *= 0.13
-    elif 50000 > profit > 10000:
-        profit *= 0.2
-    else: profit *= 0.3
-    print(f"Your tax is {profit} ")
+    print("no")
 
 
 
