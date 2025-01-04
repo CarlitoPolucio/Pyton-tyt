@@ -1,7 +1,14 @@
-temp = int(input("Enter temperature: "))
+profit = int(input("Enter the profit: "))
 
-if temp > 100 or temp < 0:
-    print("Danger shit, man.")
+if profit < 0:
+    print("dude")
 else:
-    print(f"Temperature is {temp}. You can survive")
+    if profit <= 10000:
+        profit *= 0.13
+    elif 50000 > profit > 10000:
+        profit *= 0.2
+    else: profit *= 0.3
+    print(f"Your tax is {profit} ")
+
+
 
