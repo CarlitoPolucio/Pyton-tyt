@@ -1,3 +1,5 @@
+import sys
+
 count = 8
 while count > 0:
     count -= 1
@@ -7,5 +9,7 @@ while count > 0:
         while count > 0:
             count -= 1
             tasks = int(input("How much tasks have been done? "))
-print("not everything is so smooth")
-
+        else:
+            print("not everything is so smooth")
+            sys.exit()
+print("ok")

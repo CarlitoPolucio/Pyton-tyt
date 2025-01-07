@@ -1,15 +1,1 @@
-riddle = int(input("num: "))
-count1 = 0
-number = 100
-if riddle <= 25:
-    while number > 0:
-        number = 25
-        print(number)
-        number //= 2
-        if number > riddle:
-            continue
-        elif number < riddle:
-            number = number + number // 2
-        else:
-            print("Win")
-            break
+
