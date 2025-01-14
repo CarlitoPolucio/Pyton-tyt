@@ -12,27 +12,21 @@ if x < y:
     x, y = y, x
     BOY, GIRL = GIRL, BOY
 
+boy_counter = x
+girl_counter = y
+
 if x >= y:
-    while x > 0:
+    while boy_counter > 0:
         print(BOY, end="")
-        x -= 1
+        boy_counter -= 1
         print(GIRL, end="")
-        y -= 1
-        if x != y:
+        girl_counter -= 1
+        if boy_counter != girl_counter:
             print(BOY, end="")
-            x -= 1
+            boy_counter -= 1
         else:
-            while y > 0:
+            while girl_counter > 0:
                 print(BOY, end="")
-                x -= 1
+                boy_counter -= 1
                 print(GIRL, end="")
-                y -= 1
-
-
-
-
-
-
-
-
-
+                girl_counter -= 1
