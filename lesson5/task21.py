@@ -5,8 +5,8 @@ if x / y > 2 or y / x > 2:
     print("unreal")
     exit()
 
-BOY = str("B")
-GIRL = str("G")
+BOY = "B"
+GIRL = "G"
 
 if x < y:
     x, y = y, x
