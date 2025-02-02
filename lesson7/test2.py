@@ -1,3 +1,3 @@
-x = 50
-y = x ** 0.5
-print(y)
+factor = "1"
+factor += factor
+print(int(factor) * 2)
