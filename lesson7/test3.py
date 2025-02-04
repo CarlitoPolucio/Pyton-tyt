@@ -17,6 +17,9 @@ for num in range(1, user_input + 1):
         right_output += str(right_num)
     counter += 1
     left_output += str(next_num)
-    full_output = (left_output, "." * (need_to_fill - len(left_output + right_output)), right_output)
+    full_output = (left_output, "." * need_to_fill - len(left_output + right_output), right_output)
     print("".join(full_output))
     next_num -= 1
+    need_to_fill -= 2
+
+
