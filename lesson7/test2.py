@@ -1,22 +1,34 @@
+from math import log10, ceil, floor
+depth = 100
+dots = 0
+floor_fulled_ranges = floor(log10(depth))
+ceil_fulled_ranges = floor_fulled_ranges + 1
+total_range = 0
 
-user_input = int(input("Enter the num: "))
+for i in range(1, floor_fulled_ranges + 1):
+    ten_coeff = 10 ** (i - 1)
+    range_ = 9 * (ten_coeff or 1)
+    dots += range_ * i
+    total_range += range_
 
-counter = 0
-left_output = ""
-dot_counter = ""
-next_num = user_input
-for dot in range(user_input + 1):
-    dot_counter += str(dot)
-need_to_fill = len(dot_counter) * 2 - 2
+if floor_fulled_ranges < 1:
+    dots = depth
+    total_range = depth
 
-for num in range(1, user_input + 1):
-    right_coordinate = user_input - counter
-    output = range(right_coordinate, user_input + 1)
-    right_output = ""
-    for right_num in output:
-        right_output += str(right_num)
-    counter += 1
-    left_output += str(next_num)
-    full_output = (left_output, "." * (need_to_fill - len(left_output + right_output)), right_output)
-    print("".join(full_output))
-    next_num -= 1
+dots += (depth - total_range) * ceil_fulled_ranges
+dots -= ceil_fulled_ranges
+dots *= 2
+print(dots)
+blocks_q = 1
+for i in range(depth, 0, -1):
+    for j in range(blocks_q):
+        print(depth - j, end="")
+
+    print("." * dots, end="")
+
+    for j in range(1, blocks_q + 1):
+        print(depth - blocks_q + j, end="")
+    print()
+
+    blocks_q += 1
+    dots -= ceil(log10(i)) * 2

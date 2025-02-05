@@ -1,20 +1,18 @@
-text = input("text: ")
+user_input = input("Enter the word: ")
 
-count = 0
+count = -1
+second_part = ""
 
-for letter in text:
+for letter in user_input:
     count += 1
+    if count % 2 > 0:
+        second_part = letter + second_part
+        continue
+    print(letter, end="")
+print(second_part, end="")
 
-poz = 0
-neg = 0
 
-while poz + neg * -1 != count:
-    print(text[poz], end="")
-    poz += 1
-    if poz + neg * -1 == count:
-        break
-    neg -= 1
-    print(text[neg], end="")
+
 
 
 
