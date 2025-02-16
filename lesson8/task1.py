@@ -9,3 +9,4 @@ number += user_input
 print(summa_n())
 number = summa_n()
 print(summa_n())
+

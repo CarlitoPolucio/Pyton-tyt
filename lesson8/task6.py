@@ -7,7 +7,7 @@ divider_check = sqrt(user_input)
 def is_prime(num):
     for dev_num in range(2, int(divider_check) + 1):
         if num == dev_num:
-            continue
+            break
         elif num % dev_num == 0:
             return f"{num}: Составное."
     return f"{num}: Простое."
