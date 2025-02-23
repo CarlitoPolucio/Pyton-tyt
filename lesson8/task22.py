@@ -5,7 +5,8 @@ def comparison(a, b):
     else:
         return "Budget has changed"
 
+
 budget = float(input("Enter the budget: "))
 income = float(input("Enter the income: "))
 
-print(comparison(budget,income))
+print(comparison(budget, income))
