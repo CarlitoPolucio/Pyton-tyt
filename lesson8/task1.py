@@ -1,12 +1,7 @@
-user_input = int(input("Enter the num: "))
+def summa_n(number):
+    return sum(range(1, number + 1))
 
-number = 0
+user_number = 4
+print(summa_n(user_number), summa_n(summa_n(user_number)))
 
-def summa_n():
-    return sum(range(number, 0, -1))
-
-number += user_input
-print(summa_n())
-number = summa_n()
-print(summa_n())
 

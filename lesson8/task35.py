@@ -3,7 +3,7 @@ from math import modf
 def position(x, y):
     shit_x, pos_x = modf(x * 10)
     shit_y, pos_y = modf(y * 10)
-    if not int(pos_x) in range(0, 11) or not int(pos_y in range(0, 11)):
+    if not int(pos_x) in range(0, 8) or not int(pos_y in range(0, 8)):
         return main()
     return int(pos_x), int(pos_y)
 

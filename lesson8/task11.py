@@ -1,10 +1,7 @@
-x1 = int(input("Enter the X1: "))
-y1 = int(input("Enter the y1: "))
-x2 = int(input("Enter the X2: "))
-y2 = int(input("Enter the Y2: "))
+import math
 
-text = x1, y1, x2, y2
+def distance(x1, y1, x2, y2):
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
 
-answer = max(text) - min(text)
-print(answer)
+print(distance(1, 2, 5, 6))
 

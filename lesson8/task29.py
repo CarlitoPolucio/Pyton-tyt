@@ -1,5 +1,6 @@
 from math import floor
 
+
 def poz_float_check(user_input):
     try:
         float(user_input)
@@ -12,7 +13,7 @@ def poz_float_check(user_input):
 
 
 speed = float(input("Enter internet speed (mb/s): "))
-file_size = float((input("Enter size of the file (mb): ")))
+file_size = float(input("Enter size of the file (mb): "))
 
 download = 0
 percent = 0
