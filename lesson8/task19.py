@@ -5,5 +5,5 @@ def format_num(num):
     q_dividers = len(num) - 1
     return f"x = {float(num) / 10 ** q_dividers} * {10} ** {q_dividers}"
 
-x = "0.0012"
+x = "456.456"
 print(format_num(x))
