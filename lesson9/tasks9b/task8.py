@@ -14,7 +14,7 @@ def sport(people, teams):
     return whole_teams
 
 
-members = [1, 3, 4, 67, 44, 67, 345, 45, 23, 34, 65, 23]
+members = [1, 3, 4, 67, 44, 67, 345, 45, 23]
 need_teams = 7
 
 print(sport(members, need_teams))

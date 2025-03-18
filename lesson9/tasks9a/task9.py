@@ -13,6 +13,6 @@ def bin_search(array, need_to_find):
     return array[max_index - 1] if array[max_index - 1] == need_to_find else None
 
 
-user_massive = list(range(1, 1000000, 7))
-find_value = 623057
+user_massive = list(range(100))
+find_value = 50
 print(bin_search(user_massive, find_value))
