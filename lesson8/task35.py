@@ -19,10 +19,10 @@ def check_point(horse_pos_x, horse_pos_y, point_x, point_y):
 
 
 def main():
-    horse_x = 0.655
+    horse_x = 0.755
     horse_y = 0.765
-    p_x = 0.445
-    p_y = 0.656
+    p_x = 0.645
+    p_y = 0.756
     horse_pos_x, horse_poz_y = position(horse_x, horse_y)
     point_pos_x, point_poz_y = position(p_x, p_y)
     print(check_point(horse_pos_x, horse_poz_y, point_pos_x, point_poz_y))

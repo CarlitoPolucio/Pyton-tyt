@@ -4,13 +4,13 @@ def bin_search(array, need_to_find):
     max_index = len(array) - 1
     min_index = 0
     count = 0
-    while array[max_index] != need_to_find != array[min_index]:
+    while max_index - min_index != 2 :
         count += 1
-        if need_to_find in array[(min_index + max_index) // 2:]:
+        if need_to_find > array[(min_index + max_index) // 2]:
             min_index = (min_index + max_index) // 2
-        elif need_to_find in array[:(max_index + min_index) // 2]:
+        elif need_to_find < array[(max_index + min_index) // 2]:
             max_index = (max_index + min_index) // 2
-    return array.index(need_to_find), count
+    return array[max_index - 1] if array[max_index - 1] == need_to_find else None
 
 
 user_massive = list(range(1, 1000000, 7))
