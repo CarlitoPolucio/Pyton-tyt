@@ -1,5 +1,7 @@
-a = 123
-b = 567
 
-print(((a - b) + a + (b - a) + a) - a)
 
+
+a = 567
+b = 324
+c = -a + b + a
+print(c)
