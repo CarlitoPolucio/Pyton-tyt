@@ -1,9 +1,11 @@
-def format_num(num):
-    if float(num) < 1:
-        q_dividers = len(num) - 3
-        return f"x = {float(num) * 10 ** q_dividers} * {10} ** {q_dividers * -1}"
-    q_dividers = len(num) - 1
-    return f"x = {float(num) / 10 ** q_dividers} * {10} ** {q_dividers}"
+import math
 
-x = "456.456"
+
+def format_num(num):
+    if x < 1:
+        return f"x = {x * 10 ** (str(x).count("0"))} * {10} ** -{str(x).count("0")}"
+    return f"x = {x / 10 ** (len(str(math.trunc(x))) - 1)} * {10} ** {(len(str(math.trunc(x))) - 1)}"
+
+
+x = 92345
 print(format_num(x))

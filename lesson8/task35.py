@@ -10,19 +10,21 @@ def position(x, y):
 
 
 def check_point(horse_pos_x, horse_pos_y, point_x, point_y):
-    if point_x == [horse_pos_x] or point_y == [horse_pos_y]:
+    if point_x == horse_pos_x or point_y == horse_pos_y:
         return "You cant"
-    elif (point_y + point_x) - (horse_pos_x + horse_pos_y) in [1, -1, 3, -3]:
+    elif not point_y - horse_pos_y in range(-2, 3) or not point_x - horse_pos_x in range (-2, 3):
+        return "You cant"
+    elif ((point_x + point_y) - (horse_pos_x + horse_pos_y)) % 2 > 0:
         return "You can"
     else:
         return "You cant"
 
 
 def main():
-    horse_x = 0.755
+    horse_x = 0.455
     horse_y = 0.765
-    p_x = 0.645
-    p_y = 0.756
+    p_x = 0.745
+    p_y = 0.556
     horse_pos_x, horse_poz_y = position(horse_x, horse_y)
     point_pos_x, point_poz_y = position(p_x, p_y)
     print(check_point(horse_pos_x, horse_poz_y, point_pos_x, point_poz_y))

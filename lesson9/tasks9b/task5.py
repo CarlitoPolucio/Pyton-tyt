@@ -1,13 +1,8 @@
 def comparison(line1, line2):
-    if len(line1) > len(line2):
-         line1 += line2
-         return line1
-    elif len(line1) < len(line2):
-        line2 += line1
-        return line2
-    else:
-        return "АХЪ КАбылья чешуйа"
+    x = line1.count("!") + line1.count("?")
+    y = line2.count("!") + line2.count("?")
+    return line1 + line2 if x > y else line2 + line1 if y > x else "АХЪ КАбылья чешуйа"
 
-string1 = "!!???!!?"
-string2 = "!!!?????"
+string1 = "!!!писить??"
+string2 = "!!какать!?!"
 print(comparison(string1,string2))
