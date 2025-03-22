@@ -20,6 +20,6 @@ def bin_search(array, need_to_find):
         return
 
 
-user_massive = list(range(-10000, 10000, 3))
-find_value = -1
+user_massive = [1, 3, 5]
+find_value = 3
 print(bin_search(user_massive, find_value))
