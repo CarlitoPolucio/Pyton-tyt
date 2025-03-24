@@ -1,5 +1,2 @@
-a = [1, 2, 2, 2]
-a.reverse()
-a += [0]
-print(a[:-1])
+print([[j * 4 + i for j in range(3)] for i in range(1, 5)])
 
