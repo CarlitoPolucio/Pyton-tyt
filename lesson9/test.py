@@ -1,6 +1,5 @@
-a = [1, 2, 3, 4, 5]
-
-for i, num in enumerate(a):
-    print(a[-i - 2])
-
+a = [1, 2, 2, 2]
+a.reverse()
+a += [0]
+print(a[:-1])
 

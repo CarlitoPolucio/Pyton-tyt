@@ -1,10 +1,9 @@
-a = [1, 2, 2, 2, 1, 1]
-to_add = []
-if a[0] != a[-1]:
-    to_add.append(a[0])
-for i, num in enumerate(a[:-1]):
-    if num == a[-i -2]:
-        to_add.append(num)
+a = [2, 2, 1]
+a.reverse()
+for i, x in enumerate(a[:-1]):
+    if x != a[i + 1]:
+        print(a[i + 1:], len(a[i + 1:]))
+        break
 
 
-print(to_add, len(to_add))
+

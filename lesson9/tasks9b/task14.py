@@ -7,7 +7,7 @@ violator_songs = [
     ['Enjoy the Silence', 4.20],
     ['Policy of Truth', 4.76],
     ['Blue Dress', 4.29],
-    ['Clean', 5.83]
+    ['Clean', 5.83],
 ]
 for song in violator_songs:
     print(song)
