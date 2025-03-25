@@ -41,3 +41,21 @@ pairs = [(x, y) for x in range(3) for y in range(3)]
 filtered = [[x for x in row if x % 2 == 0] for row in matrix]
 # Результат: [[0, 2], [2], [2, 4]]
 ```
+
+## all
+Возвращает True, если все элементы итерируемого объекта истинны (или если объект пуст).
+
+```python
+all([True, 1, "hello"])  # True
+all([True, 0, "hello"])  # False (0 == False)
+all([])                  # True (пустой список)
+```
+
+## any
+Возвращает True, если хотя бы один элемент итерируемого объекта истинен (если объект пуст — False).
+```python
+any([False, 0, "hello"])  # True ("hello" == True)
+any([False, 0, ""])       # False
+any([])                   # False (пустой список)
+```
+
