@@ -72,7 +72,7 @@ person = {
     "city": "Москва"
 }
 print(person.keys())    # ['name', 'age', 'job']
-print(person.values())  # ['Анна', 26, 'Программист']
+print(person.values())  # ['Семён', 26, 'Программист']
 ```
 
 ### Итерация по словарю
