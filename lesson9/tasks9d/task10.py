@@ -1,11 +1,11 @@
 def data_validation(__data_list: list) -> list:
     skip = []
-    for ip in __data_list:
+    for i, ip in enumerate(__data_list):
         for num in ip[0].split("."):
             if num.isdigit() and int(num) in range(256):
                 continue
             else:
-                skip.append(ip)
+                skip.append(i)
                 break
     return __data_list
 

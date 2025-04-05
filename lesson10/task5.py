@@ -10,5 +10,8 @@ incomes = {
     'persimmon': 310.00,
 }
 
-print(sum(incomes.values()), min(incomes.values()), {key: value for key, value in incomes.items() if value != min(incomes.values())})
+to_remove = [sym for sym in incomes.keys() if incomes[sym] == min(incomes.values())]
+print(sum(incomes.values()), to_remove)
+del incomes[to_remove[0]]
+print(incomes)
 
