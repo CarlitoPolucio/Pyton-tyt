@@ -1,8 +1,9 @@
 from _collections_abc import Iterable
 
 
-def __zip(*args: Iterable): #-> tuple:
-    return tuple((tuple(iter_obj[i]) for iter_obj in enumerate(args)) for i in range(len(args)))
+def __zip(*args: Iterable):
+    min_tup = min(len(tuple(iter_obj)) for iter_obj in args)
+    return tuple(tuple(tuple(iter_obj)[i] for iter_obj in args) for i in range(min_tup))
 
 
 if __name__ == '__main__':
@@ -10,7 +11,10 @@ if __name__ == '__main__':
     sym = ("s", "a", "t")
     sas = [False, True, False]
     boom = {"a": 5, "b": 4, "c": 2}
-    print(tuple(zip(nums,sym,sas,boom)))
+    print((__zip(nums, sym, sas, boom)))
+
+    for nums, sym, sas, boom in __zip(nums, sym, sas, boom):
+        print(nums, sym, sas, boom)
 
 
 
