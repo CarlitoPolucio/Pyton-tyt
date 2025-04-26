@@ -1,4 +1,4 @@
-def student(__stud_inf: dict) -> (list, int):
+def student(__stud_inf: dict) -> tuple[list, int]:
     interest_list = [val for interests in [__stud_inf[i]["interests"] for i in __stud_inf] for val in interests]
     surname_long = sum([len(__stud_inf[i]["surname"]) for i in __stud_inf])
     return interest_list, surname_long

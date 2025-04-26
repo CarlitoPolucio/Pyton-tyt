@@ -3,7 +3,7 @@ from _collections_abc import Iterable
 
 def is_prime(check_num: int) -> bool:
     for num in range(2, round(check_num ** 0.5) + 1):
-        if check_num % num == 0 and check_num != num:
+        if check_num % num == 0:
             return False
     return True
 

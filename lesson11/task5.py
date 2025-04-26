@@ -3,7 +3,7 @@ from _collections_abc import Iterable
 
 def __zip(*args: Iterable):
     min_tup = min(len(tuple(iter_obj)) for iter_obj in args)
-    return tuple(tuple(tuple(iter_obj)[i] for iter_obj in args) for i in range(min_tup))
+    return (tuple(tuple(iter_obj)[i] for iter_obj in args) for i in range(min_tup))
 
 
 if __name__ == '__main__':
@@ -15,6 +15,7 @@ if __name__ == '__main__':
 
     for nums, sym, sas, boom in __zip(nums, sym, sas, boom):
         print(nums, sym, sas, boom)
+
 
 
 
