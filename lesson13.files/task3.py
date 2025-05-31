@@ -13,5 +13,5 @@ def path_definition(_path: str) ->  str | None | tuple[str, int]:
 
 
 if __name__ == '__main__':
-    user_path =  r"E:/github/lesson13.files/task3.py"
+    user_path =  r"C:\Users\doubl\OneDrive\Рабочий стол\Stalker2.exe"
     print(path_definition(user_path))
