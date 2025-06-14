@@ -13,7 +13,7 @@ def competition(_path: str):
 
 
 def second_tour_sort(_member_inf: list):
-    _member_inf.sort(key=lambda member: member[-2:], reverse=True)
+    _member_inf.sort(key=lambda member: int(member[-2:]), reverse=True)
     with open(os.getcwd() + r"\\second_tour", mode="w") as second_tour:
         second_tour.write(f"{str(len(_member_inf))} \n")
         [second_tour.write(f"{i + 1} {memb}\n") for i, memb in enumerate(_member_inf)]

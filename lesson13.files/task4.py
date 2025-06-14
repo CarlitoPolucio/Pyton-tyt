@@ -8,8 +8,6 @@ def dir_name(input_path: str, search_file: str) -> None:
              print(full_path)
          elif os.path.isdir(full_path):
              dir_name(full_path, search_file)
-         else:
-             continue
 
 
 if __name__ == '__main__':

@@ -6,4 +6,4 @@ with open(main_dir + "scripts.txt", mode="a") as file:
         if py.endswith("py"):
             with open(main_dir + py, mode="r") as script:
                 file.write(f"{script.read()}\n")
-                file.write(f"{"!"* 40}\n")
+                file.write(f"{'!'* 40}\n")
